@@ -1,0 +1,22 @@
+{
+  "name": "webstorm-live-edit-with-babel",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "scripts": {
+    "start": "node --require babel-register src/server.js",
+    "build": "babel src --out-dir build --source-maps",
+    "build:watch": "npm run build -- --watch"
+  }
+}
